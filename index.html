@@ -1343,13 +1343,13 @@
             font-display: swap;
         }
         :root {
-            --bg: #111116;
+            --bg: #000000;
             --fg: #f5f5f5;
             --muted: #b0b0b0;
             --accent: #ff3b3b;
             --accent-soft: rgba(255, 59, 59, 0.15);
             --accent-border: rgba(255, 59, 59, 0.7);
-            --card-bg: #18181d;
+            --card-bg: #111111;
             --border-soft: rgba(255, 255, 255, 0.08);
         }
         :root {
@@ -1365,11 +1365,11 @@
             transform: translate(-50%);
             width: auto;
             height: 1vw;
-            background-color: rgba(255, 255, 255, 0.08);
+            background-color: #000c;
             padding: 14px;
             font-weight: 400;
             font-size: .651vw;
-            color: #111;
+            color: #fff;
             justify-content: center;
             align-items: center;
             font-family: "Montserrat", sans-serif;
@@ -1483,15 +1483,15 @@
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            background: rgba(255, 255, 255, 0.08);
-            border: 1px solid rgba(255, 255, 255, 0.18);
+            background: rgba(12, 13, 16, 0.66);
+            border: 1px solid rgba(255, 255, 255, 0.15);
             border-radius: 0;
             overflow: hidden;
             backdrop-filter: blur(12px) saturate(125%);
             box-shadow:
                 0 0 1.4vw rgba(255, 255, 255, 0.08),
                 0 0 1.2vw rgba(var(--menu-color), 0.18),
-                0 .22vw .85vw rgba(0, 0, 0, 0.18);
+                0 .22vw .85vw rgba(0, 0, 0, 0.44);
             transition: height 220ms ease, transform 220ms ease, box-shadow 220ms ease;
         }
         .PWrapper .PBanner {
@@ -1532,7 +1532,7 @@
             flex-direction: row;
             gap: .12vw;
             padding: .12vw .16vw;
-            background: rgba(255, 255, 255, 0.08);
+            background: rgba(0, 0, 0, 0.22);
             border: 0;
             border-radius: 0;
             backdrop-filter: blur(10px);
@@ -1560,10 +1560,10 @@
             box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.18);
         }
         .PWrapper .PRightElements {
-            background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.05));
-            border: 1px solid rgba(255, 255, 255, 0.14);
+            background: linear-gradient(180deg, rgba(10, 12, 18, 0.9), rgba(8, 9, 13, 0.8));
+            border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 18px;
-            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.18);
+            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
             overflow: hidden;
         }
         .PWrapper .PBanner {
@@ -1596,9 +1596,9 @@
             box-shadow: inset 0 1px 0 rgba(255,255,255,0.2), 0 8px 18px rgba(var(--menu-color), 0.22);
         }
         .PWrapper .PTabs {
-            background: rgba(255, 255, 255, 0.08);
+            background: rgba(255, 255, 255, 0.03);
             border: 0;
-            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
             padding: 0.18vw 0.18vw 0.24vw;
             gap: 0.16vw;
         }
@@ -1629,9 +1629,9 @@
         .Desc {
             border-radius: 999px;
             padding: 0.7vw 1.1vw;
-            background: rgba(255, 255, 255, 0.08);
-            border: 1px solid rgba(255,255,255,0.12);
-            box-shadow: 0 10px 24px rgba(0,0,0,0.18);
+            background: rgba(10, 12, 18, 0.72);
+            border: 1px solid rgba(255,255,255,0.1);
+            box-shadow: 0 10px 24px rgba(0,0,0,0.28);
             backdrop-filter: blur(10px);
         }
         .PWrapper .PBanner::after {
@@ -1838,7 +1838,7 @@
             height: 0.2525vw;
             justify-content: flex-start;
             align-items: center;
-            background-color: rgba(255, 255, 255, 0.12);
+            background-color: rgba(0, 0, 0, 0.5);
         }
         .PWrapper .PTabs .PTab .TOptions .Slider .Progress {
             position: absolute;
@@ -1900,7 +1900,7 @@
             justify-content: flex-start;
             align-items: center;
 
-            background-color: rgba(255, 255, 255, 0.12);
+            background-color: rgba(0, 0, 0, 0.5);
             border-radius: 0.2vw;
         }
         .PWrapper .PTabs .PTab .Slider .Progress {
@@ -2123,7 +2123,7 @@
             display: flex;
             width: .2604vw;
             height: .7813vw;
-            background-color: rgba(255, 255, 255, 0.12);
+            background-color: #000;
             border-radius: .05vw;
             justify-content: center;
             align-items: flex-end;
@@ -2144,7 +2144,7 @@
             margin-top: 0;
             justify-content: center;
             align-items: center;
-            background-color: rgba(255, 255, 255, 0.08);
+            background-color: #000000;
             border-top: 1px solid rgba(var(--menu-color), 1.0);
         }
         .PWrapper .PFooter .PBuild {
@@ -2264,7 +2264,7 @@
             right: .5vw;
             font-size: .55vw;
             font-weight: 200;
-            color: #666;
+            color: #bebebe;
         }
         .NotificationsWrapper {
             position: fixed;
@@ -2289,12 +2289,12 @@
             position: relative;
             pointer-events: none;
             overflow: hidden;
-            color: #111;
+            color: #f4f4f4;
             font-family: "Poppins", sans-serif;
-            background: rgba(255, 255, 255, 0.08);
-            border: 1px solid rgba(255, 255, 255, 0.18);
+            background: rgba(12, 13, 16, 0.78);
+            border: 1px solid rgba(255, 255, 255, 0.14);
             border-radius: .16vw;
-            box-shadow: 0 .16vw .5vw rgba(0, 0, 0, 0.18);
+            box-shadow: 0 .16vw .5vw rgba(0, 0, 0, 0.28);
             backdrop-filter: blur(10px) saturate(120%);
             opacity: 0;
             transform: translateX(18px) scale(0.98);
@@ -2557,7 +2557,7 @@
             display: flex;
             width: 100%;
             height: 100%;
-            background: radial-gradient(circle at top, rgba(255,255,255,0.08), rgba(255,255,255,0.14));
+            background: radial-gradient(circle at top, rgba(0,0,0,0.2), rgba(0,0,0,0.6));
             backdrop-filter: blur(2px);
         }
         .InputWrapper {
@@ -2567,23 +2567,23 @@
             transform: translateX(-50%);
             width: min(640px, 88vw);
             min-height: 120px;
-            background: rgba(255, 255, 255, 0.08);
+            background: rgba(10, 12, 18, 0.95);
             border: 1px solid rgba(255, 255, 255, 0.12);
-            border-radius: 12px;
+            border-radius: 16px;
             overflow: hidden;
             font-family: Montserrat, sans-serif;
-            box-shadow: 0 10px 28px rgba(0, 0, 0, 0.18);
+            box-shadow: 0 18px 40px rgba(0, 0, 0, 0.4);
         }
         .InputWrapper .Header {
             display: flex;
             align-items: center;
             height: 38px;
-            padding: 0 14px;
+            padding: 0 14px 0 12px;
             gap: 10px;
             color: #f5f5f5;
             font-size: 13px;
             font-weight: 600;
-            background: rgba(255,255,255,0.04);
+            background: linear-gradient(90deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
             position: relative;
         }
         .InputWrapper .Header::after {
@@ -2593,7 +2593,7 @@
             bottom: 0;
             width: calc(100% - 24px);
             height: 1px;
-            background: rgba(255,255,255,0.08);
+            background: linear-gradient(90deg, rgb(var(--menu-color)), transparent);
             border-radius: 999px;
         }
         .InputWrapper .Header img {
@@ -2609,22 +2609,22 @@
         }
         .InputWrapper .Body {
             display: flex;
-            align-items: center;
+            align-items: stretch;
             min-height: 82px;
-            padding: 12px 14px;
+            padding: 10px 12px 12px;
             color: #dce4f0;
             font-size: 13px;
-            background: rgba(255, 255, 255, 0.06);
+            background: rgba(18, 20, 26, 0.88);
         }
         .InputWrapper .Body .InsideCon {
             display: flex;
-            align-items: center;
+            align-items: stretch;
             width: 100%;
             min-height: 60px;
-            border-radius: 10px;
-            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.08);
             background: rgba(255,255,255,0.03);
-            padding: 10px 12px;
+            padding: 8px 10px;
             box-sizing: border-box;
         }
         .InputWrapper .Body textarea {
@@ -2638,49 +2638,15 @@
             font-size: 13px;
             line-height: 1.45;
             font-family: inherit;
-            caret-color: #ffffff;
+            caret-color: rgb(var(--menu-color));
             user-select: text;
             padding: 0;
-            box-shadow: none !important;
         }
         .InputWrapper .Body textarea::placeholder {
             color: rgba(255,255,255,0.38);
         }
         .InputWrapper .Body textarea:focus {
             box-shadow: none;
-        }
-        .InputWrapper {
-            background: rgba(9, 11, 16, 0.96);
-            border: 1px solid rgba(255, 255, 255, 0.14);
-            border-radius: 18px;
-            backdrop-filter: blur(18px) saturate(140%);
-            box-shadow: 0 22px 48px rgba(0, 0, 0, 0.42), inset 0 1px 0 rgba(255, 255, 255, 0.08);
-        }
-        .InputWrapper .Header {
-            background: linear-gradient(90deg, rgba(var(--menu-color), 0.24), rgba(255, 255, 255, 0.04));
-            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-        }
-        .InputWrapper .Body {
-            background: rgba(8, 10, 15, 0.92);
-            padding: 12px 14px;
-        }
-        .InputWrapper .Body .InsideCon {
-            background: rgba(255, 255, 255, 0.04);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.02);
-            padding: 10px 12px;
-        }
-        .InputWrapper .Body .InsideCon:focus-within {
-            border-color: rgba(255,255,255,0.18);
-        }
-        .InputWrapper .Body textarea:focus,
-        .InputWrapper .Body textarea:active {
-            outline: none;
-            box-shadow: none !important;
-        }
-        .InputWrapper .Body textarea::selection {
-            background: rgba(255,255,255,0.2);
-            color: #fff;
         }
         .KBLWrapper {
             position: absolute;
@@ -2694,8 +2660,8 @@
             font-family: Inter;
             border-radius: .62vw;
             overflow: hidden;
-            background: rgba(255, 255, 255, 0.08);
-            box-shadow: 0 .18vw .55vw rgba(0, 0, 0, 0.12);
+            background: rgba(0, 0, 0, 0.48);
+            box-shadow: 0 .18vw .55vw rgba(0, 0, 0, 0.16);
             backdrop-filter: none;
         }
         .KBLWrapper .Header {
@@ -2708,7 +2674,7 @@
             flex-direction: row;
             gap: .1042vw;
             padding: 0 .25vw;
-            background-color: rgba(255, 255, 255, 0.12);
+            background-color: rgba(0, 0, 0, 0.64);
             border-bottom: .0521vw solid rgb(var(--menu-color));
         }
         .KBLWrapper .Header::before {
@@ -2740,7 +2706,7 @@
             align-items: center;
             flex-direction: column;
             gap: .12vw;
-            background-color: rgba(255, 255, 255, 0.08);
+            background-color: rgba(0, 0, 0, 0.36);
             padding: .1042vw;
             transition: background-color 220ms ease;
         }
@@ -2808,11 +2774,11 @@
             border: 1px solid rgba(255, 255, 255, 0.14);
             border-left: .12vw solid rgb(var(--menu-color));
             border-radius: .16vw;
-            background: rgba(255, 255, 255, 0.08);
+            background: rgba(12, 13, 16, 0.72);
             backdrop-filter: blur(10px) saturate(120%);
-            box-shadow: 0 .16vw .55vw rgba(0, 0, 0, 0.15);
+            box-shadow: 0 .16vw .55vw rgba(0, 0, 0, 0.3);
             font-family: "Poppins", sans-serif;
-            color: #111;
+            color: #e7e7e7;
             pointer-events: none;
             z-index: 9998;
         }
@@ -2859,8 +2825,8 @@
             font-family: Inter;
             border-radius: .62vw;
             overflow: hidden;
-            background: rgba(255, 255, 255, 0.08);
-            box-shadow: 0 .18vw .55vw rgba(0, 0, 0, 0.12);
+            background: rgba(0, 0, 0, 0.48);
+            box-shadow: 0 .18vw .55vw rgba(0, 0, 0, 0.16);
             backdrop-filter: none;
             z-index: 9998;
         }
@@ -2874,7 +2840,7 @@
             flex-direction: row;
             gap: .1042vw;
             padding: 0 .25vw;
-            background-color: rgba(255, 255, 255, 0.14);
+            background-color: rgba(0, 0, 0, 0.64);
             border-bottom: .0521vw solid rgb(var(--menu-color));
         }
         .InvspelWrapper .Header span {
@@ -2893,7 +2859,7 @@
             align-items: center;
             flex-direction: column;
             gap: .12vw;
-            background-color: rgba(255, 255, 255, 0.08);
+            background-color: rgba(0, 0, 0, 0.36);
             padding: .2vw;
         }
         .InvspelWrapper .PlayerRow {
@@ -2938,9 +2904,9 @@
             gap: .2vw;
             padding: .16vw .28vw;
             border-radius: 999px;
-            background: rgba(255, 255, 255, 0.10);
-            border: .0521vw solid rgba(255, 255, 255, 0.20);
-            box-shadow: 0 .16vw .48vw rgba(0, 0, 0, 0.16);
+            background: rgba(0, 0, 0, 0.72);
+            border: .0521vw solid rgba(255, 255, 255, 0.24);
+            box-shadow: 0 .16vw .48vw rgba(0, 0, 0, 0.34);
             transform: translate(-50%, -50%);
         }
         .SelectedPlayerDot {
@@ -2963,13 +2929,13 @@
             transform: translateX(-50%);
             padding: .24vw .48vw;
             border-radius: 999px;
-            background: rgba(255, 255, 255, 0.12);
-            border: .0521vw solid rgba(255, 255, 255, 0.20);
-            color: #111;
+            background: rgba(0, 0, 0, 0.7);
+            border: .0521vw solid rgba(255, 255, 255, 0.24);
+            color: #fff;
             font-size: .54vw;
             font-weight: 600;
             letter-spacing: .01vw;
-            box-shadow: 0 .16vw .48vw rgba(0, 0, 0, 0.14);
+            box-shadow: 0 .16vw .48vw rgba(0, 0, 0, 0.28);
         }
         .Crosshair {
             position: absolute;
@@ -3007,9 +2973,9 @@
             justify-content: center;
             padding: .18vw .28vw;
             border-radius: .32vw;
-            background: rgba(255, 255, 255, 0.12);
-            border: .0521vw solid rgba(255, 255, 255, 0.20);
-            color: #111;
+            background: rgba(0, 0, 0, 0.72);
+            border: .0521vw solid rgba(255, 255, 255, 0.24);
+            color: #fff;
             font-size: .52vw;
             font-weight: 600;
             white-space: nowrap;
@@ -3131,7 +3097,7 @@
         #splash-screen {
             position: fixed;
             inset: 0;
-            background: rgba(255, 255, 255, 0.08);
+            background: #000;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -3319,11 +3285,11 @@
         }
         .notify {
             pointer-events: auto;
-            background: rgba(255,255,255,0.08);
+            background: var(--card-bg);
             color: var(--fg);
             padding: 14px 14px 12px;
             border-radius: 8px;
-            border: 1px solid rgba(255,255,255,0.12);
+            border: 1px solid #202020;
             margin-bottom: 10px;
             transform: translateX(24px);
             opacity: 0;
@@ -3345,7 +3311,7 @@
             opacity: 1;
         }
         .notify:hover {
-            background: rgba(255,255,255,0.12);
+            background: #171717;
         }
         .notify .title {
             font-size: 0.9rem;
@@ -3383,10 +3349,10 @@
             display: flex;
             align-items: center;
             font-size: 12px;
-            background: rgba(255, 255, 255, 0.08);
+            background: rgba(0, 0, 0, 0.55);
             border-radius: 4px;
             overflow: hidden;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
             opacity: 0;
             transition: opacity .6s;
             z-index: 9000;
@@ -3398,7 +3364,7 @@
             align-items: center;
             justify-content: center;
             gap: 6px;
-            background: rgba(255, 255, 255, 0.1);
+            background: #161618;
             padding: 0 5px;
             font-weight: 400;
             min-width: 90px;
@@ -3413,7 +3379,7 @@
             display: flex;
             align-items: center;
             padding: 0 12px;
-            background: rgba(255, 255, 255, 0.08);
+            background: rgba(0, 0, 0, 0.25);
             min-width: 200px;
             height: 28px;
             justify-content: space-around;
@@ -3500,10 +3466,10 @@
             transform: translate(-50%, -50%) translateY(100px);
             width: min(84vw, 320px);
             padding: 14px 16px;
-            background: rgba(255, 255, 255, 0.12);
-            border: 1px solid rgba(255, 255, 255, 0.18);
+            background: rgba(10, 12, 18, 0.86);
+            border: 1px solid rgba(255, 255, 255, 0.12);
             border-radius: 18px;
-            box-shadow: 0 22px 48px rgba(0, 0, 0, 0.15);                
+            box-shadow: 0 22px 48px rgba(0, 0, 0, 0.3);                
             text-align: center;
             user-select: none;
             pointer-events: none;
@@ -3545,7 +3511,8 @@
         *,
         *::before,
         *::after {
-            box-sizing: border-box;
+            border-radius: 0 !important;
+            box-shadow: none !important;
         }
         #followLogo,
         .freecam-ghostItem {
@@ -3586,13 +3553,6 @@
         .WeaponPreviewLabel {
             color: #ddd;
             font-size: 12px;
-        }
-        .Desc {
-            background: rgba(12, 14, 20, 0.72);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 999px;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 16px 34px rgba(0, 0, 0, 0.3);
         }
 
 </style>
