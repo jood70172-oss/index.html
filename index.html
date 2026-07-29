@@ -1559,6 +1559,81 @@
             border-color: rgba(255, 255, 255, 0.32);
             box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.18);
         }
+        .PWrapper .PRightElements {
+            background: linear-gradient(180deg, rgba(10, 12, 18, 0.9), rgba(8, 9, 13, 0.8));
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 18px;
+            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
+            overflow: hidden;
+        }
+        .PWrapper .PBanner {
+            height: 6.8vw;
+            border-radius: 18px 18px 0 0 !important;
+        }
+        .PWrapper .PBanner img {
+            border-radius: 18px 18px 0 0 !important;
+            filter: saturate(1.06) brightness(1.04);
+        }
+        .PWrapper .PCategories {
+            padding: 0.16vw 0.18vw;
+            gap: 0.16vw;
+            background: rgba(255, 255, 255, 0.04);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .PWrapper .PCategories .PCategory {
+            border-radius: 999px;
+            font-weight: 600;
+            letter-spacing: 0.02vw;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: transform 180ms ease, background 180ms ease, border-color 180ms ease;
+        }
+        .PWrapper .PCategories .PCategory:hover {
+            transform: translateY(-1px);
+            background: rgba(255, 255, 255, 0.09);
+        }
+        .PWrapper .PCategories .PCategory.active {
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.2), 0 8px 18px rgba(var(--menu-color), 0.22);
+        }
+        .PWrapper .PTabs {
+            background: rgba(255, 255, 255, 0.03);
+            border: 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+            padding: 0.18vw 0.18vw 0.24vw;
+            gap: 0.16vw;
+        }
+        .PWrapper .PTabs .PTab {
+            border-radius: 12px;
+            padding: 0 0.4vw;
+            margin: 0;
+            min-height: 1.48vw;
+            height: 1.48vw;
+            transition: background 180ms ease, transform 180ms ease, box-shadow 180ms ease;
+        }
+        .PWrapper .PTabs .PTab:hover {
+            background: rgba(255, 255, 255, 0.06);
+            transform: translateX(2px);
+        }
+        .PWrapper .PTabs .PTab.active {
+            background: linear-gradient(90deg, rgba(var(--menu-color), 0.24), rgba(var(--menu-color), 0.12));
+            box-shadow: inset 0 0 0 1px rgba(255,255,255,0.08);
+        }
+        .PWrapper .PTabs .PTab .PTLabel,
+        .PWrapper .PTabs .PTab .PTDLabel {
+            font-weight: 500;
+            letter-spacing: 0.01vw;
+        }
+        .PWrapper .PTabs .PTab .TOptions .Scrollable {
+            color: rgba(255,255,255,0.82);
+        }
+        .Desc {
+            border-radius: 999px;
+            padding: 0.7vw 1.1vw;
+            background: rgba(10, 12, 18, 0.72);
+            border: 1px solid rgba(255,255,255,0.1);
+            box-shadow: 0 10px 24px rgba(0,0,0,0.28);
+            backdrop-filter: blur(10px);
+        }
         .PWrapper .PBanner::after {
             content: "";
             position: absolute;
@@ -2482,82 +2557,96 @@
             display: flex;
             width: 100%;
             height: 100%;
-            background-color: #0009;
+            background: radial-gradient(circle at top, rgba(0,0,0,0.2), rgba(0,0,0,0.6));
+            backdrop-filter: blur(2px);
         }
         .InputWrapper {
             position: absolute;
             left: 50%;
             bottom: 6vw;
             transform: translateX(-50%);
-            width: 620px;
-            height: 52px;
-            background: rgba(18, 18, 18, 0.85);
-            border-radius: 0;
+            width: min(640px, 88vw);
+            min-height: 120px;
+            background: rgba(10, 12, 18, 0.95);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 16px;
             overflow: hidden;
-            font-family: Montserrat;
+            font-family: Montserrat, sans-serif;
+            box-shadow: 0 18px 40px rgba(0, 0, 0, 0.4);
         }
         .InputWrapper .Header {
             display: flex;
             align-items: center;
-            height: 21px;
-            padding: 0 14px 0 9px;
+            height: 38px;
+            padding: 0 14px 0 12px;
             gap: 10px;
-            color: #eaeaea;
+            color: #f5f5f5;
             font-size: 13px;
-            font-weight: 400;
-            background: rgba(18, 18, 18, 0.85);
+            font-weight: 600;
+            background: linear-gradient(90deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
             position: relative;
         }
         .InputWrapper .Header::after {
             content: "";
             position: absolute;
-            left: 5px;
+            left: 12px;
             bottom: 0;
-            width: calc(100% - 13px);
+            width: calc(100% - 24px);
             height: 1px;
-            background: rgb(var(--menu-color));
-            border-radius: 0.1vw;
+            background: linear-gradient(90deg, rgb(var(--menu-color)), transparent);
+            border-radius: 999px;
         }
         .InputWrapper .Header img {
             width: 20px;
             height: 20px;
+            border-radius: 50%;
+            object-fit: cover;
         }
         .InputWrapper .Header .Line {
             width: 1px;
             height: 16px;
-            background: #ffffff30;
+            background: rgba(255,255,255,0.2);
         }
         .InputWrapper .Body {
             display: flex;
-            align-items: center;
-            height: 28px;
-            padding: 0 14px;
-            color: #bfc6d4;
+            align-items: stretch;
+            min-height: 82px;
+            padding: 10px 12px 12px;
+            color: #dce4f0;
             font-size: 13px;
+            background: rgba(18, 20, 26, 0.88);
         }
         .InputWrapper .Body .InsideCon {
             display: flex;
-            align-items: center;
+            align-items: stretch;
             width: 100%;
+            min-height: 60px;
+            border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.08);
+            background: rgba(255,255,255,0.03);
+            padding: 8px 10px;
+            box-sizing: border-box;
         }
-        .InputWrapper .Body span {
-            display: inline-flex;
-            align-items: center;
-            white-space: nowrap;
+        .InputWrapper .Body textarea {
+            width: 100%;
+            min-height: 44px;
+            border: 0;
+            outline: none;
+            resize: vertical;
+            background: transparent;
+            color: #f5f6f8;
+            font-size: 13px;
+            line-height: 1.45;
+            font-family: inherit;
+            caret-color: rgb(var(--menu-color));
+            user-select: text;
+            padding: 0;
         }
-        .InputWrapper .Body span::after {
-            content: "";
-            display: inline-block;
-            width: 1px;
-            height: 16px;
-            margin-left: 4px;
-            background: #ffffff;
-            animation: blink 1s steps(2, start) infinite;
+        .InputWrapper .Body textarea::placeholder {
+            color: rgba(255,255,255,0.38);
         }
-        @keyframes blink {
-            to {
-                visibility: hidden
-            }
+        .InputWrapper .Body textarea:focus {
+            box-shadow: none;
         }
         .KBLWrapper {
             position: absolute;
@@ -3467,14 +3556,9 @@
         }
 
 </style>
-<style data-emotion="css-global" data-s=""></style><style data-emotion="css-global" data-s=""></style></head>
+</head>
 <body>
-<div id="root" style="background-image: url(&quot;https://h.top4top.io/p_3834qdv1j1.png&quot;); background-size: cover; background-repeat: no-repeat; background-position: center center;"><div style="visibility: visible; height: 100%;"><div class="PWrapper" style="transition-property: transform, opacity; transition-duration: 200ms; transition-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1); transform-origin: left top; opacity: 1; transform: translate(0px, -50%) scale(1); inset: 50% auto auto 1.5vw; margin-top: 0px; margin-bottom: 0px;"><div class="PBanner"><img src="./Wroot UI_files/Gemini_Generated_Image_sezzobsezzobsezz.png" draggable="false"></div><div class="PElements"><div class="PScroll"><div class="PSProgressWrapper"><div class="PSProgress" style="height: 97%; top: 0%;"></div></div></div><div class="PRightElements"><div class="PCategories"><div class="PCategory active">Main Menu</div></div><div class="PTabs" style="transform: translateX(0px);"><div style="position: absolute; width: 100%; top: 0vw; height: 1.5625vw; background: linear-gradient(
-                                                            90deg,
-                                                            rgba(var(--menu-color),0.85) 0%,
-                                                            rgba(var(--menu-color),0.7) 50%,
-                                                            rgba(var(--menu-color),0.55) 100%
-                                                        ); z-index: 0; transition: top 0.18s cubic-bezier(0.22, 0.61, 0.36, 1), height 0.22s cubic-bezier(0.22, 0.61, 0.36, 1); pointer-events: none;"></div><div class="PTab active"><span class="PTLabel">Player</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--mdi" width="1.1vw" height="1.1vw" viewBox="0 0 24 24" style="position: absolute; right: 0.65vw; color: rgb(150, 150, 150); display: flex; align-items: center; justify-content: center;"><path fill="currentColor" d="M8.59 16.58L13.17 12L8.59 7.41L10 6l6 6l-6 6z"></path></svg></div><div class="PTab "><span class="PTLabel">Weapon</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--mdi" width="1.1vw" height="1.1vw" viewBox="0 0 24 24" style="position: absolute; right: 0.65vw; color: rgb(150, 150, 150); display: flex; align-items: center; justify-content: center;"><path fill="currentColor" d="M8.59 16.58L13.17 12L8.59 7.41L10 6l6 6l-6 6z"></path></svg></div><div class="PTab "><span class="PTLabel">Server</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--mdi" width="1.1vw" height="1.1vw" viewBox="0 0 24 24" style="position: absolute; right: 0.65vw; color: rgb(150, 150, 150); display: flex; align-items: center; justify-content: center;"><path fill="currentColor" d="M8.59 16.58L13.17 12L8.59 7.41L10 6l6 6l-6 6z"></path></svg></div><div class="PTab "><span class="PTLabel">Combat</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--mdi" width="1.1vw" height="1.1vw" viewBox="0 0 24 24" style="position: absolute; right: 0.65vw; color: rgb(150, 150, 150); display: flex; align-items: center; justify-content: center;"><path fill="currentColor" d="M8.59 16.58L13.17 12L8.59 7.41L10 6l6 6l-6 6z"></path></svg></div><div class="PTab "><span class="PTLabel">Vehicle</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--mdi" width="1.1vw" height="1.1vw" viewBox="0 0 24 24" style="position: absolute; right: 0.65vw; color: rgb(150, 150, 150); display: flex; align-items: center; justify-content: center;"><path fill="currentColor" d="M8.59 16.58L13.17 12L8.59 7.41L10 6l6 6l-6 6z"></path></svg></div><div class="PTab "><span class="PTLabel">Visual</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--mdi" width="1.1vw" height="1.1vw" viewBox="0 0 24 24" style="position: absolute; right: 0.65vw; color: rgb(150, 150, 150); display: flex; align-items: center; justify-content: center;"><path fill="currentColor" d="M8.59 16.58L13.17 12L8.59 7.41L10 6l6 6l-6 6z"></path></svg></div><div class="PTab "><span class="PTLabel">Miscellaneous</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--mdi" width="1.1vw" height="1.1vw" viewBox="0 0 24 24" style="position: absolute; right: 0.65vw; color: rgb(150, 150, 150); display: flex; align-items: center; justify-content: center;"><path fill="currentColor" d="M8.59 16.58L13.17 12L8.59 7.41L10 6l6 6l-6 6z"></path></svg></div><div class="PTab "><span class="PTLabel">Settings</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--mdi" width="1.1vw" height="1.1vw" viewBox="0 0 24 24" style="position: absolute; right: 0.65vw; color: rgb(150, 150, 150); display: flex; align-items: center; justify-content: center;"><path fill="currentColor" d="M8.59 16.58L13.17 12L8.59 7.41L10 6l6 6l-6 6z"></path></svg></div></div><div class="PFooter"><span class="PBuild"><span class="PBuildText1">Lord Menu</span><span class="PBuildText2">discord.gg/mks</span><span class="PBuildText3">beta</span></span><img class="PFooterLogo" src="./Wroot UI_files/ChatGPT Image 2 يوليو 2026، 12_47_30 ص.png"><span class="PIndicator">1 / 8</span></div></div></div></div><div class="NotificationsWrapper"></div><div class="KBLWrapper" style="transition-property: opacity; transition-duration: 500ms; transition-timing-function: ease; opacity: 1;"><div class="Header"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--mdi Icon" width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="M19 10h-2V8h2m0 5h-2v-2h2m-3-1h-2V8h2m0 5h-2v-2h2m0 6H8v-2h8m-9-5H5V8h2m0 5H5v-2h2m1 0h2v2H8m0-5h2v2H8m3 1h2v2h-2m0-5h2v2h-2m9-5H4c-1.11 0-2 .89-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2"></path></svg><span>Keybinds</span></div><div class="Keybinds"><div class="Keybind"><div class="Label">Noclip</div><div class="Elements"><span class="KeyLabel" style="color: rgba(242, 242, 242, 0.95);">(U)</span><span class="KeyState" style="color: white;">On</span></div></div><div class="Keybind"><div class="Label">Freecam</div><div class="Elements"><span class="KeyLabel" style="color: rgba(242, 242, 242, 0.95);">(H)</span><span class="KeyState" style="color: rgba(255, 255, 255, 0.5);">Off</span></div></div><div class="Keybind"><div class="Label">Refill Health</div><div class="Elements"><span class="KeyLabel" style="color: rgba(242, 242, 242, 0.95);">Z</span></div></div><div class="Keybind"><div class="Label">Refill Armour</div><div class="Elements"><span class="KeyLabel" style="color: rgba(242, 242, 242, 0.95);">Z</span></div></div></div></div><div class="InvspelWrapper" style="transition-property: opacity; transition-duration: 300ms; transition-timing-function: ease; opacity: 1; right: 1.0417vw; top: 9vw;"><div class="Header"><span>show invisible</span></div><div class="Players"><div class="Empty">No nearby/invisible players</div></div></div><div class="WatermarkWrapper" style="transition-property: opacity; transition-duration: 260ms; transition-timing-function: ease; opacity: 1; left: 1vw; top: 1vw;"><img class="WatermarkLogo" src="./Wroot UI_files/ChatGPT Image 2 يوليو 2026، 12_41_08 ص.png" draggable="false"><div class="WatermarkDivider"></div><div class="WatermarkText"><span class="WatermarkTag">Lord menu</span><span>Lord</span><span>--/--/----</span><span>0 FPS</span></div></div><img class="Crosshair" src="./Wroot UI_files/crosshair-icon-lg.png" draggable="false"><div class="FCWrapper" style="transition-property: opacity; transition-duration: 300ms; transition-timing-function: ease; opacity: 1;"><div class="Option Selected" style="opacity: 1;">Default</div><div class="Option " style="opacity: 0.9;">Teleport</div><div class="Option " style="opacity: 0.8;">Shoot Weapon</div><div class="Option " style="opacity: 0.7;">Shoot Nearby Players</div><div class="Option " style="opacity: 0.6;">Black Hole Objects</div><div class="Option " style="opacity: 0.5;">Shoot Vehicle</div><div class="Option " style="opacity: 0.4;">Shoot Car (SEAF)</div><div class="Option " style="opacity: 0.4;">Spawn Car</div><div class="Option " style="opacity: 0.4;">Spawn Object</div><div class="Option " style="opacity: 0.4;">Heli Attacker</div><div class="Option " style="opacity: 0.4;">Explode</div><div class="Option " style="opacity: 0.4;">Bring Vehicle</div><div class="Option " style="opacity: 0.4;">Kick from Vehicle</div><div class="Option " style="opacity: 0.4;">NPC Hijack</div><div class="Option " style="opacity: 0.4;">Copy Appearance</div><div class="Option " style="opacity: 0.4;">Detach Wheels</div></div></div></div>
+<div id="root"></div>
 <script type="module">
 function tp(e, t) {
     for (var n = 0; n < t.length; n++) {
@@ -17275,45 +17359,59 @@ const Bg = () => {
         title: "Keyboard Input",
         value: "Value"
     });
+    const n = L.useRef(null);
     return $.exports.useEffect( () => {
-        const n = r => {
-            const o = r.data;
-            if (!(!o || !o.action))
-                switch (o.action) {
+        const o = r => {
+            const i = r.data;
+            if (!(!i || !i.action))
+                switch (i.action) {
                 case "updateKeyboard":
                     t({
-                        visible: o.visible,
-                        title: o.title,
-                        value: o.value
+                        visible: i.visible,
+                        title: i.title,
+                        value: i.value
                     });
                     break;
                 case "getClipboard":
-                    navigator.clipboard.readText().then(i => {
-                        t(l => ({
-                            ...l,
-                            value: i
+                    navigator.clipboard.readText().then(l => {
+                        t(s => ({
+                            ...s,
+                            value: l
                         }))
                     }
                     )
                 }
         }
         ;
-        return window.addEventListener("message", n),
-        () => window.removeEventListener("message", n)
+        return window.addEventListener("message", o),
+        () => window.removeEventListener("message", o)
     }
     , []),
+    L.useEffect( () => {
+        if (!e.visible)
+            return;
+        const o = window.setTimeout( () => {
+            if (n.current) {
+                n.current.focus();
+                n.current.select();
+            }
+        }
+        , 80);
+        return () => window.clearTimeout(o)
+    }
+    , [e.visible]),
     x(bt, {
         mounted: e.visible,
         transition: "fade",
         duration: 200,
         timingFunction: "ease",
-        children: n => U(On, {
+        children: o => U(On, {
             children: [x("div", {
                 className: "Overlay",
-                style: n
+                style: o
             }), U("div", {
                 className: "InputWrapper",
-                style: n,
+                style: o,
                 children: [U("div", {
                     className: "Header",
                     children: [x("img", {
@@ -17326,19 +17424,23 @@ const Bg = () => {
                     })]
                 }), x("div", {
                     className: "Body",
-                    style: {
-                        background: "rgba(18, 18, 18, 0.85)"
-                    },
                     children: x("div", {
                         className: "InsideCon",
-                        style: {
-                            background: "rgba(18, 18, 18, 0.85)",
-                            borderRadius: "0px",
-                            padding: "0 8px",
-                            minHeight: "22px"
-                        },
-                        children: x("span", {
-                            children: e.value
+                        children: x("textarea", {
+                            ref: n,
+                            value: e.value || "",
+                            placeholder: "Type or paste text here...",
+                            spellCheck: !1,
+                            autoCapitalize: "off",
+                            autoCorrect: "off",
+                            onChange: i => t(l => ({
+                                ...l,
+                                value: i.target.value
+                            })),
+                            onKeyDown: i => i.stopPropagation(),
+                            onKeyUp: i => i.stopPropagation(),
+                            onPaste: i => i.stopPropagation(),
+                            onCopy: i => i.stopPropagation()
                         })
                     })
                 })]
