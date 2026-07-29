@@ -1483,16 +1483,15 @@
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            background: rgba(12, 13, 16, 0.66);
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            border-radius: 0;
+            background: linear-gradient(180deg, rgba(8, 10, 16, 0.78), rgba(10, 14, 24, 0.68));
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 18px;
             overflow: hidden;
-            backdrop-filter: blur(12px) saturate(125%);
+            backdrop-filter: blur(18px) saturate(110%);
             box-shadow:
-                0 0 1.4vw rgba(255, 255, 255, 0.08),
-                0 0 1.2vw rgba(var(--menu-color), 0.18),
-                0 .22vw .85vw rgba(0, 0, 0, 0.44);
-            transition: height 220ms ease, transform 220ms ease, box-shadow 220ms ease;
+                0 20px 50px rgba(0, 0, 0, 0.32),
+                inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+            transition: height 260ms cubic-bezier(.16,.8,.35,1), transform 260ms cubic-bezier(.16,.8,.35,1), box-shadow 260ms cubic-bezier(.16,.8,.35,1);
         }
         .PWrapper .PBanner {
             position: relative;
@@ -1503,6 +1502,7 @@
             align-items: center;
             overflow: hidden;
             border-radius: 1.4vw 1.4vw 0 0 !important;
+            background: radial-gradient(circle at top left, rgba(255,255,255,0.08), transparent 40%), linear-gradient(180deg, rgba(10, 14, 24, 0.95), rgba(6, 10, 20, 0.78));
         }
         .PWrapper .PBanner img {
             position: absolute;
@@ -1560,10 +1560,12 @@
             box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.18);
         }
         .PWrapper .PRightElements {
-            background: linear-gradient(180deg, rgba(10, 12, 18, 0.9), rgba(8, 9, 13, 0.8));
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: linear-gradient(180deg, rgba(8, 16, 38, 0.96), rgba(5, 12, 28, 0.94));
+            border: 1px solid rgba(70, 132, 255, 0.18);
             border-radius: 18px;
-            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
+            box-shadow:
+                0 24px 64px rgba(0, 0, 0, 0.34),
+                inset 0 0 0 1px rgba(255, 255, 255, 0.04);
             overflow: hidden;
         }
         .PWrapper .PBanner {
@@ -1577,30 +1579,33 @@
         .PWrapper .PCategories {
             padding: 0.16vw 0.18vw;
             gap: 0.16vw;
-            background: rgba(255, 255, 255, 0.04);
+            background: rgba(255, 255, 255, 0.02);
             border-bottom: 1px solid rgba(255, 255, 255, 0.08);
         }
         .PWrapper .PCategories .PCategory {
             border-radius: 999px;
             font-weight: 600;
             letter-spacing: 0.02vw;
-            background: rgba(255, 255, 255, 0.05);
+            background: rgba(255, 255, 255, 0.04);
             border: 1px solid rgba(255, 255, 255, 0.08);
-            transition: transform 180ms ease, background 180ms ease, border-color 180ms ease;
+            transition: transform 260ms cubic-bezier(.16,.8,.35,1), background 260ms cubic-bezier(.16,.8,.35,1), border-color 260ms cubic-bezier(.16,.8,.35,1);
         }
         .PWrapper .PCategories .PCategory:hover {
             transform: translateY(-1px);
             background: rgba(255, 255, 255, 0.09);
         }
         .PWrapper .PCategories .PCategory.active {
-            box-shadow: inset 0 1px 0 rgba(255,255,255,0.2), 0 8px 18px rgba(var(--menu-color), 0.22);
+            background: rgba(var(--menu-color), 0.16);
+            border-color: rgba(var(--menu-color), 0.28);
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.12), 0 6px 18px rgba(var(--menu-color), 0.18);
         }
         .PWrapper .PTabs {
-            background: rgba(255, 255, 255, 0.03);
+            background: rgba(255, 255, 255, 0.04);
             border: 0;
-            border-top: 1px solid rgba(255, 255, 255, 0.06);
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
             padding: 0.18vw 0.18vw 0.24vw;
             gap: 0.16vw;
+            backdrop-filter: blur(12px);
         }
         .PWrapper .PTabs .PTab {
             border-radius: 12px;
@@ -1608,15 +1613,16 @@
             margin: 0;
             min-height: 1.48vw;
             height: 1.48vw;
-            transition: background 180ms ease, transform 180ms ease, box-shadow 180ms ease;
+            transition: background 260ms cubic-bezier(.16,.8,.35,1), transform 260ms cubic-bezier(.16,.8,.35,1), box-shadow 260ms cubic-bezier(.16,.8,.35,1);
+            background: rgba(255, 255, 255, 0.06);
         }
         .PWrapper .PTabs .PTab:hover {
-            background: rgba(255, 255, 255, 0.06);
-            transform: translateX(2px);
+            background: rgba(255, 255, 255, 0.11);
+            transform: translateX(1px);
         }
         .PWrapper .PTabs .PTab.active {
-            background: linear-gradient(90deg, rgba(var(--menu-color), 0.24), rgba(var(--menu-color), 0.12));
-            box-shadow: inset 0 0 0 1px rgba(255,255,255,0.08);
+            background: rgba(var(--menu-color), 0.24);
+            box-shadow: 0 0 0 1px rgba(255,255,255,0.08), 0 10px 26px rgba(var(--menu-color), 0.15);
         }
         .PWrapper .PTabs .PTab .PTLabel,
         .PWrapper .PTabs .PTab .PTDLabel {
@@ -1654,7 +1660,9 @@
             text-align: center;
         }
         .PWrapper .PCategories .PCategory.active {
-                background: rgb(var(--menu-color));
+            background: rgba(var(--menu-color), 0.2);
+            border-color: rgba(var(--menu-color), 0.28);
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.12), 0 8px 22px rgba(var(--menu-color), 0.16);
         }
         .PWrapper .PCategories .PCategory:only-child {
             position: relative;
@@ -1677,12 +1685,12 @@
             justify-content: flex-start;
             align-items: center;
             flex-direction: column;
-            background: rgba(255, 255, 255, 0.04);
+            background: rgba(255, 255, 255, 0.045);
             border: 1px solid rgba(255, 255, 255, 0.12);
-            border-radius: 0;
+            border-radius: 18px;
             backdrop-filter: blur(18px);
             overflow-y: hidden;
-            transition: height 220ms ease, max-height 220ms ease, background-color 220ms ease;
+            transition: height 260ms cubic-bezier(.16,.8,.35,1), max-height 260ms cubic-bezier(.16,.8,.35,1), background-color 260ms cubic-bezier(.16,.8,.35,1);
         }
         .PWrapper .PTabs .PTab {
             position: relative;
@@ -1695,14 +1703,17 @@
             align-items: center;
             transform: translateX(0);
             opacity: 1;
-            transition: transform 220ms ease, opacity 220ms ease, background-color 220ms ease;
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(255,255,255,0.08);
             border-radius: 999px;
-            margin: 0.18vw 0.15vw;
-            padding: 0 0.3vw;
+            margin: 0.18vw 0.12vw;
+            padding: 0 0.4vw;
+            transition: transform 260ms cubic-bezier(.16,.8,.35,1), opacity 260ms cubic-bezier(.16,.8,.35,1), background-color 260ms cubic-bezier(.16,.8,.35,1), border-color 260ms cubic-bezier(.16,.8,.35,1), box-shadow 260ms cubic-bezier(.16,.8,.35,1);
         }
         .PWrapper .PTabs .PTab.active {
-            background: rgba(var(--menu-color), 0.16);
-            box-shadow: inset 0 0 0.6vw rgba(var(--menu-color), 0.12);
+            background: rgba(var(--menu-color), 0.23);
+            border-color: rgba(var(--menu-color), 0.32);
+            box-shadow: inset 0 0 0 1px rgba(255,255,255,0.08), 0 10px 28px rgba(var(--menu-color), 0.12);
         }
         .PWrapper .PTabs .PTab.slide-out {
             animation: slideOutLeft 300ms ease forwards;
@@ -1846,7 +1857,9 @@
             height: 100%;
             justify-content: center;
             align-items: center;
-            background: #ffffff;
+            background: rgba(var(--menu-color), 0.95);
+            border-radius: 999px;
+            transition: width 200ms cubic-bezier(.16,.8,.35,1), background 200ms cubic-bezier(.16,.8,.35,1);
         }
         .PWrapper .PTabs .PTab .TOptions .Slider .Progress .Thumb {
             display: block;
@@ -1860,7 +1873,8 @@
             min-height: 5px;
             background: #fff;
             border-radius: 50%;
-            box-shadow: 0 0 0 1px rgba(0,0,0,0.2);
+            box-shadow: 0 0 0 1px rgba(0,0,0,0.12);
+            transition: transform 200ms cubic-bezier(.16,.8,.35,1), background 200ms cubic-bezier(.16,.8,.35,1);
         }
         /* Checkbox */
         .PWrapper .PTabs .PTab .Checkbox {
@@ -1871,12 +1885,14 @@
             height: .7813vw;
             justify-content: center;
             align-items: center;
-            background-color: #3d3d3d;
+            background-color: rgba(255,255,255,0.08);
             border-radius: 999px !important;
             overflow: hidden;
+            transition: background 220ms cubic-bezier(.16,.8,.35,1);
         }
         .PWrapper .PTabs .PTab .Checkbox.Checked {
-            background: rgb(var(--menu-color));
+            background: rgba(var(--menu-color), 0.94);
+            box-shadow: 0 0 0.25vw rgba(var(--menu-color), 0.35);
         }
         .PWrapper .PTabs .PTab .Checkbox.Checked .Inside {
             left: .95vw;
@@ -1926,35 +1942,6 @@
             background: #fff;
             border-radius: 50%;
             box-shadow: 0 0 0 1px rgba(0,0,0,0.2);
-        }
-        .PWrapper .PTabs .PTab .TOptions .Slider,
-        .PWrapper .PTabs .PTab .Slider {
-            background-color: rgba(255, 255, 255, 0.32) !important;
-            height: 0.12vw !important;
-            border-radius: 0 !important;
-        }
-        .PWrapper .PTabs .PTab .TOptions .Slider .Progress {
-            position: absolute;
-            display: flex;
-            height: 100%;
-            justify-content: center;
-            align-items: center;
-            background: #ffffff;
-            border-radius: 0;
-        }
-        .PWrapper .PTabs .PTab .TOptions .Slider .Progress .Thumb {
-            display: block;
-            position: absolute;
-            right: 0;
-            top: 50%;
-            transform: translate(50%, -50%);
-            width: 0.18vw;
-            height: 0.38vw;
-            min-width: 5px;
-            min-height: 5px;
-            background: #fff;
-            border-radius: 0;
-            box-shadow: none;
         }
         .PWrapper .PTabs .PTab .Scrollable {
             position: absolute;
@@ -2567,12 +2554,13 @@
             transform: translateX(-50%);
             width: min(640px, 88vw);
             min-height: 120px;
-            background: rgba(10, 12, 18, 0.95);
-            border: 1px solid rgba(255, 255, 255, 0.12);
-            border-radius: 16px;
+            background: rgba(4, 12, 32, 0.95);
+            border: 1px solid rgba(63, 137, 255, 0.22);
+            border-radius: 20px;
             overflow: hidden;
             font-family: Montserrat, sans-serif;
-            box-shadow: 0 18px 40px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 22px 60px rgba(0, 0, 0, 0.55);
+            transition: transform 260ms cubic-bezier(.16,.8,.35,1), box-shadow 260ms cubic-bezier(.16,.8,.35,1), border-color 260ms cubic-bezier(.16,.8,.35,1);
         }
         .InputWrapper .Header {
             display: flex;
@@ -2583,7 +2571,7 @@
             color: #f5f5f5;
             font-size: 13px;
             font-weight: 600;
-            background: linear-gradient(90deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+            background: linear-gradient(90deg, rgba(35, 109, 233, 0.95), rgba(18, 74, 198, 0.95));
             position: relative;
         }
         .InputWrapper .Header::after {
@@ -2614,7 +2602,8 @@
             padding: 10px 12px 12px;
             color: #dce4f0;
             font-size: 13px;
-            background: rgba(18, 20, 26, 0.88);
+            background: rgba(5, 16, 42, 0.96);
+            border-top: 1px solid rgba(255,255,255,0.06);
         }
         .InputWrapper .Body .InsideCon {
             display: flex;
@@ -2623,7 +2612,7 @@
             min-height: 60px;
             border-radius: 12px;
             border: 1px solid rgba(255,255,255,0.08);
-            background: rgba(255,255,255,0.03);
+            background: rgba(255,255,255,0.04);
             padding: 8px 10px;
             box-sizing: border-box;
         }
@@ -3007,6 +2996,12 @@
             font-family: "Fjalla One", sans-serif !important;
             gap: .12vw;
             overflow: hidden;
+            padding: .12vw;
+            background: transparent;
+            border: 0;
+            border-radius: 1vw;
+            box-shadow: none;
+            backdrop-filter: none;
         }
         .FCWrapper .Option {
             font-family: "Fjalla One", sans-serif !important;
@@ -3018,27 +3013,28 @@
             min-height: 1.08vw;
             padding: 0 .34vw;
             border-radius: .38vw;
-            background: transparent;
-            border: 0;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.08);
             font-size: .76vw;
             font-weight: 600;
             color: rgba(255, 255, 255, 0.93);
             letter-spacing: 0;
             backdrop-filter: none;
             text-shadow:
-                0 1px 1px rgba(0, 0, 0, 0.85),
-                0 0 4px rgba(0, 0, 0, 0.45) !important;
+                0 1px 1px rgba(0, 0, 0, 0.35);
             transition: transform 180ms ease, background-color 180ms ease, color 180ms ease, box-shadow 180ms ease;
+        }
+        .FCWrapper .Option:hover {
+            background: rgba(255,255,255,0.1);
         }
         .FCWrapper .Option.Selected {
             color: rgb(var(--menu-color));
             font-weight: 700;
-            background: transparent;
-            border: 0;
-            box-shadow: none;
+            background: rgba(255,255,255,0.12);
+            border: 1px solid rgba(var(--menu-color),0.22);
+            box-shadow: 0 0 1.2vw rgba(var(--menu-color), 0.16);
             text-shadow:
-                0 1px 1px rgba(0, 0, 0, 0.88),
-                0 0 4px rgba(0, 0, 0, 0.52) !important;
+                0 1px 1px rgba(0, 0, 0, 0.44);
             transform: translateX(.04vw);
         }
         .FCWrapper .Option.Selected::before {
